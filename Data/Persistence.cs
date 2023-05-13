@@ -6,42 +6,26 @@ namespace Data
 {
     public class Persistence
     {
-        MySqlConnection connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString);
+        MySqlConnection _connection = new MySqlConnection(ConfigurationManager.ConnectionStrings["Conn"].ConnectionString);
 
-        public bool OpenConnection()
+        public MySqlConnection OpenConnection()
         {
+
             try
             {
-                this.connection.Open();
-                return true;
-            } 
-            catch (MySqlException exception)
+                _connection.Open();
+                return _connection;
+            }
+            catch (Exception e)
             {
-                switch (exception.Number)
-                {
-                    case 0:
-                        Console.WriteLine(" Cannot connect to server. Contact adminustrator.");
-                        break;
-                    case 1045:
-                        Console.WriteLine(" Invalid username/password, please try again");
-                        break;
-                }
-                return false;
+                e.ToString();
+                return null;
             }
         }
 
-        public bool CloseConnection()
+        public void CloseConnection()
         {
-            try
-            {
-                this.connection.Close();
-                return true;
-            }
-            catch (MySqlException exceptino)
-            {
-                Console.WriteLine(exceptino.Message);
-                return false;
-            }
+            _connection.Close();
         }
     }
 }

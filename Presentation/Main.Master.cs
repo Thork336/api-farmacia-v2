@@ -13,5 +13,15 @@ namespace Presentation
         {
 
         }
+
+        protected void LBProviders_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WFProviders.aspx");
+        }
+
+        protected void LBDriver_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WFDriver.aspx");
+        }
     }
 }

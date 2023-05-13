@@ -12,8 +12,12 @@
 <body>
     <form id="form1" runat="server">
         <div>
+            <asp:Label ID="Label1" runat="server" Text="">Menu</asp:Label><br/>
+            <asp:LinkButton ID="LBProviders" runat="server" OnClick="LBProviders_Click">Proveedores</asp:LinkButton>
+            <asp:LinkButton ID="LBDriver" runat="server" OnClick="LBDriver_Click">Conductores</asp:LinkButton><br/>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
+            <asp:Label ID="Label2" runat="server" Text="">Pie De Pagina</asp:Label><br/>
         </div>
     </form>
 </body>

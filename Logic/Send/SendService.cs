@@ -5,7 +5,7 @@ namespace Logic.Send
 {
     public class SendService
     {
-        private SendRepository _repository;
+        private SendRepository _repository = new SendRepository();
 
         public DataSet list()
         {
