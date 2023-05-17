@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using MySql.Data.MySqlClient;
 
 namespace Data.Driver
@@ -26,16 +27,16 @@ namespace Data.Driver
             string type_license)
         {
             Persistence connection = new Persistence();
-            DataSet data = new DataSet();
+            //DataSet data = new DataSet();
             int row = 0;
             bool executed = false;
        
-            MySqlDataAdapter adapter = new MySqlDataAdapter();
+            //MySqlDataAdapter adapter = new MySqlDataAdapter();
             MySqlCommand command = new MySqlCommand();
             command.Connection = connection.OpenConnection();
             command.CommandText = "procUpdateDriver";
             command.CommandType = CommandType.StoredProcedure;
-            command.Parameters.Add("id_cond", MySqlDbType.Int24).Value = id_driver;
+            command.Parameters.Add("id_conductor", MySqlDbType.Int24).Value = id_driver;
             command.Parameters.Add("cedula_cond", MySqlDbType.Int24).Value = identification_driver;
             command.Parameters.Add("numLicencia_cond", MySqlDbType.Text).Value = numberLicence_driver;
             command.Parameters.Add("nombre_cond", MySqlDbType.Text).Value = name_driver;
@@ -44,12 +45,20 @@ namespace Data.Driver
             command.Parameters.Add("edad_cond", MySqlDbType.Int24).Value = age_driver;
             command.Parameters.Add("genero_cond", MySqlDbType.Text).Value = gender_driver;
             command.Parameters.Add("tipoLicencia_cond", MySqlDbType.Text).Value = type_license;
-            adapter.SelectCommand = command;
-            adapter.Fill(data);
-            row = command.ExecuteNonQuery();
-            if (row == 0)
+            //adapter.SelectCommand = command;
+            //adapter.Fill(data);
+
+            try
             {
-                executed = true;
+                row = command.ExecuteNonQuery();
+                if (row == 1)
+                {
+                    executed = true;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error" + e.ToString()); ;
             }
             
             connection.CloseConnection();
@@ -61,7 +70,7 @@ namespace Data.Driver
             string type_license)
         {
             Persistence connection = new Persistence();
-            DataSet data = new DataSet();
+            //DataSet data = new DataSet();
             int row = 0;
             bool executed = false;
             
@@ -79,11 +88,19 @@ namespace Data.Driver
             command.Parameters.Add("genero_cond", MySqlDbType.Text).Value = gender_driver;
             command.Parameters.Add("tipoLicencia_cond", MySqlDbType.Text).Value = type_license;
             adapter.SelectCommand = command;
-            adapter.Fill(data);
-            row = command.ExecuteNonQuery();
-            if (row == 1)
+            //adapter.Fill(data);
+
+            try
             {
-                executed = true;
+                row = command.ExecuteNonQuery();
+                if (row == 1)
+                {
+                    executed = true;
+                }
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Error" + e.ToString());
             }
             
             connection.CloseConnection();

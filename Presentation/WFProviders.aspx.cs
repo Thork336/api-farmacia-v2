@@ -32,7 +32,7 @@ namespace Presentation
 
         protected void BtnGuardar_Click(object sender, EventArgs e)
         {
-            id_provider = Convert.ToInt32(TBIdProvider.Text);
+           // id_provider = Convert.ToInt32(TBIdProvider.Text);
             nit_provider = Convert.ToInt32(TBNitProvider.Text);
             name_provider = TBNomProvider.Text;
             city_provider = TBCityProvider.Text;

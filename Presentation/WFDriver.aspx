@@ -3,8 +3,9 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server"><br/>
 
-    <asp:Label ID="Label10" runat="server" Text="">Ingrese el ID</asp:Label><br/>
-    <asp:TextBox ID="TBId" runat="server"></asp:TextBox><br/>
+    <asp:Label ID="Label10" runat="server" Text="">ID</asp:Label><br/>
+    <asp:Label ID="TBId" runat="server" Text=""></asp:Label><br/>
+    <%--<asp:TextBox ID="TBId" runat="server"></asp:TextBox><br/>--%>
 
     <asp:Label ID="Label2" runat="server" Text="">Ingrese La Identificacion Del Conductor</asp:Label><br/>
     <asp:TextBox ID="TBIdentiConductor" runat="server"></asp:TextBox><br/>

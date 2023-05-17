@@ -64,6 +64,7 @@ namespace Presentation
 
         protected void BtnActualizar_Click(object sender, EventArgs e)
         {
+            id_cond = Convert.ToInt32(TBId.Text);
             cedula_cond = Convert.ToInt32(TBIdentiConductor.Text);
             numLicencia_cond = TBNumLicenciaConductor.Text;
             nombre_cond = TBNomConductor.Text;
