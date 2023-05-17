@@ -89,8 +89,8 @@ namespace Presentation
 
         protected void GVSend_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            id_send = TBIdSend.Text
-            service.delete();
+            id_send = Convert.ToInt32(GVSend.DataKeys[e.RowIndex].Values[0]);
+            service.delete(id_send);
         }
     }
 }
