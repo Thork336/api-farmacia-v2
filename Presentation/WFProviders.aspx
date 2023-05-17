@@ -5,8 +5,9 @@
 
     <asp:TextBox ID="TBCodigo" runat="server"></asp:TextBox><br/>
 
-    <asp:Label ID="Label5" runat="server" Text="">Ingrese El Id De Proveedor</asp:Label><br/>
-    <asp:TextBox ID="TBIdProvider" runat="server"></asp:TextBox><br/>
+    <asp:Label ID="Label5" runat="server" Text="">Id De Proveedor</asp:Label><br/>
+    <asp:Label ID="TBIdProvider" runat="server" Text=""></asp:Label><br/>
+    <%--<asp:TextBox ID="TBIdProvider" runat="server"></asp:TextBox><br/>--%>
 
     <asp:Label ID="Label2" runat="server" Text="">Ingrese El Nit Del Proveedor</asp:Label><br/>
     <asp:TextBox ID="TBNitProvider" runat="server"></asp:TextBox><br/>

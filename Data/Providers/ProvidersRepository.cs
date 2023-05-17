@@ -1,4 +1,5 @@
-﻿using System.Data;
+﻿using System;
+using System.Data;
 using MySql.Data.MySqlClient;
 
 namespace Data.Providers
@@ -24,7 +25,7 @@ namespace Data.Providers
         public bool update(int id_provider, int nit_provider, string name_provider, string city_provider)
         {
             Persistence connection = new Persistence();
-            DataSet data = new DataSet();
+            //DataSet data = new DataSet();
             int row = 0;
             bool executed = false;
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -37,7 +38,7 @@ namespace Data.Providers
             command.Parameters.Add("name_provider", MySqlDbType.Text).Value = name_provider;
             command.Parameters.Add("city_provider", MySqlDbType.Text).Value = city_provider;
             adapter.SelectCommand = command;
-            adapter.Fill(data);
+            //adapter.Fill(data);
             row = command.ExecuteNonQuery();
             if (row == 1)
             {
@@ -51,7 +52,7 @@ namespace Data.Providers
         public bool insert(int nit_provider, string name_provider, string city_provider)
         {
             Persistence connection = new Persistence();
-            DataSet data = new DataSet();
+           // DataSet data = new DataSet();
             int row = 0;
             bool executed = false;
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -63,12 +64,21 @@ namespace Data.Providers
             command.Parameters.Add("name_provider", MySqlDbType.Text).Value = name_provider;
             command.Parameters.Add("city_provider", MySqlDbType.Text).Value = city_provider;
             adapter.SelectCommand = command;
-            adapter.Fill(data);
-            row = command.ExecuteNonQuery();
-            if (row == 1)
+            // adapter.Fill(data);
+            try
             {
-                executed = true;
+                row = command.ExecuteNonQuery();
+
+                if (row == 1)
+                {
+                    executed = true;
+                }
+            } 
+            catch (Exception e)
+            {
+                Console.WriteLine("Error" + e.ToString());
             }
+            
             
             connection.CloseConnection();
             return executed;
