@@ -20,9 +20,9 @@ namespace Data.Send {
             return data;
         }
 
-        public bool updatde(int id_shipping, int number_shipping, string address_shipping, int phone_shipping, int id_driver) {
+        public bool updatde(int id_shipping, int number_shipping, string address_shipping, string phone_shipping, int id_driver) {
             Persistence connection = new Persistence();
-            DataSet data = new DataSet();
+            //DataSet data = new DataSet();
             int row = 0;
             bool executed = false;
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -32,11 +32,11 @@ namespace Data.Send {
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.Add("id_shipping", MySqlDbType.Int24).Value = id_shipping;
             command.Parameters.Add("number_shipping", MySqlDbType.Int24).Value = number_shipping;
-            command.Parameters.Add("address_shipping", MySqlDbType.Text).Value = address_shipping;
-            command.Parameters.Add("phone_shipping", MySqlDbType.Int24).Value = phone_shipping;
+            command.Parameters.Add("address_shipping", MySqlDbType.VarString).Value = address_shipping;
+            command.Parameters.Add("phone_shipping", MySqlDbType.VarString).Value = phone_shipping;
             command.Parameters.Add("id_driver", MySqlDbType.Int24).Value = id_driver;
             adapter.SelectCommand = command;
-            adapter.Fill(data);
+            //adapter.Fill(data);
             row = command.ExecuteNonQuery();
             if (row == 1) { 
                 executed = true;
@@ -46,10 +46,9 @@ namespace Data.Send {
             return executed;
         }
 
-        public bool insert(int number_shipping, string address_shipping, int phone_shipping, int id_driver)
+        public bool insert(int number_shipping, string address_shipping, string phone_shipping, int id_driver)
         {
             Persistence connection = new Persistence();
-            DataSet data = new DataSet();
             int row = 0;
             bool executed = false;
             MySqlDataAdapter adapter = new MySqlDataAdapter();
@@ -59,10 +58,9 @@ namespace Data.Send {
             command.CommandType = CommandType.StoredProcedure;
             command.Parameters.Add("number_shipping", MySqlDbType.Int24).Value = number_shipping;
             command.Parameters.Add("address_shipping", MySqlDbType.Text).Value = address_shipping;
-            command.Parameters.Add("phone_shipping", MySqlDbType.Int24).Value = phone_shipping;
+            command.Parameters.Add("phone_shipping", MySqlDbType.Text).Value = phone_shipping;
             command.Parameters.Add("id_driver", MySqlDbType.Int24).Value = id_driver;
             adapter.SelectCommand = command;
-            adapter.Fill(data);
             row = command.ExecuteNonQuery();
             if (row == 1)
             {
