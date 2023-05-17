@@ -22,7 +22,7 @@
     <asp:Label ID="LblMensaje" runat="server" Text=""></asp:Label><br/>
 
     <asp:Label ID="Label1" runat="server" Text="">Lista de envios:</asp:Label><br/>
-    <asp:GridView ID="GVSend" runat="server" OnSelectedIndexChanged="GVSend_SelectedIndexChanged">
+    <asp:GridView ID="GVSend" runat="server" OnSelectedIndexChanged="GVSend_SelectedIndexChanged" DataKeyNames="id_env" OnRowDeleting="GVSend_RowDeleting">
         <Columns>
             <asp:CommandField ShowSelectButton="True" />
             <asp:CommandField ShowDeleteButton="True" />

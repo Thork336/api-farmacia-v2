@@ -1,6 +1,7 @@
 ﻿using Logic.Send;
 using System;
 using System.Data;
+using System.Web.UI.WebControls;
 
 namespace Presentation
 {
@@ -53,11 +54,12 @@ namespace Presentation
         protected void update(object sender, EventArgs e)
         {
             bool executed = false;
+            id_driver = Convert.ToInt32(TBIdSend.Text);
             codeShipping = Convert.ToInt32(TBCodeSend.Text);
             address = TBAddresSend.Text;
             phone = TBPhoneSend.Text;
             id_driver = 0;
-            executed = service.update(0, codeShipping, address, phone, id_driver);
+            executed = service.update(id_send, codeShipping, address, phone, id_driver);
 
             if (executed)
             {
@@ -83,6 +85,12 @@ namespace Presentation
             TBCodeSend.Text = GVSend.SelectedRow.Cells[2].Text;
             TBAddresSend.Text = GVSend.SelectedRow.Cells[3].Text;
             TBPhoneSend.Text = GVSend.SelectedRow.Cells[4].Text;
+        }
+
+        protected void GVSend_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        {
+            id_send = TBIdSend.Text
+            service.delete();
         }
     }
 }
