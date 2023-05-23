@@ -16,8 +16,8 @@ namespace Data.User
         {
             MySqlDataAdapter objAdapter = new MySqlDataAdapter();
             DataSet objData = new DataSet();
-
             MySqlCommand objSelectCmd = new MySqlCommand();
+
             objSelectCmd.Connection = objPer.OpenConnection();
             objSelectCmd.CommandText = "procSelectUser";
             objSelectCmd.CommandType = CommandType.StoredProcedure;
@@ -95,7 +95,7 @@ namespace Data.User
             objSelectCmd.Connection = objPer.OpenConnection();
             objSelectCmd.CommandText = "procDeleteUser";
             objSelectCmd.CommandType = CommandType.StoredProcedure;
-            objSelectCmd.Parameters.Add("p_id_country", MySqlDbType.Int32).Value = _id_user;
+            objSelectCmd.Parameters.Add("id_user", MySqlDbType.Int32).Value = _id_user;
 
             try
             {

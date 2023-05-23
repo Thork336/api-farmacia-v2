@@ -71,6 +71,8 @@
     <Content Include="WFDriver.aspx" />
     <Content Include="WFProviders.aspx" />
     <Content Include="WFSend.aspx" />
+    <Content Include="WFUser.aspx" />
+    <Content Include="WFVehicle.aspx" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Main.Master.cs">
@@ -101,6 +103,20 @@
     </Compile>
     <Compile Include="WFSend.aspx.designer.cs">
       <DependentUpon>WFSend.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFUser.aspx.cs">
+      <DependentUpon>WFUser.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFUser.aspx.designer.cs">
+      <DependentUpon>WFUser.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="WFVehicle.aspx.cs">
+      <DependentUpon>WFVehicle.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="WFVehicle.aspx.designer.cs">
+      <DependentUpon>WFVehicle.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

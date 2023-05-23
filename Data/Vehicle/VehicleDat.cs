@@ -93,7 +93,7 @@ namespace Data.Vehicle
             int row;
             MySqlCommand objSelectCmd = new MySqlCommand();
             objSelectCmd.Connection = objPer.OpenConnection();
-            objSelectCmd.CommandText = "spDeleteVehicle";
+            objSelectCmd.CommandText = "procDeleteVehicle";
             objSelectCmd.CommandType = CommandType.StoredProcedure;
             objSelectCmd.Parameters.Add("id_vehicle", MySqlDbType.Int32).Value = _id_vehicle;
             try
