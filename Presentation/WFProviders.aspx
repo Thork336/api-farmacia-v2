@@ -18,12 +18,12 @@
     <asp:Label ID="Label4" runat="server" Text="">Ingrese La Ciudad Del Proveedor</asp:Label><br/>
     <asp:TextBox ID="TBCityProvider" runat="server"></asp:TextBox><br/>
 
-    <asp:Button ID="BtnGuardar" runat="server" Text="Guardar" OnClick="BtnGuardar_Click" /><br/>
-    <asp:Button ID="BtnActualizar" runat="server" Text="Actualizar" OnClick="BtnActualizar_Click" /><br/>
+    <asp:Button ID="BtnGuardar" runat="server" CssClass="btn btn-success" Text="Guardar" OnClick="BtnGuardar_Click" />
+    <asp:Button ID="BtnActualizar" runat="server" CssClass="btn btn-info" Text="Actualizar" OnClick="BtnActualizar_Click" /><br/>
     <asp:Label ID="LblMensaje" runat="server" Text=""></asp:Label><br/>
 
     <asp:Label ID="Label1" runat="server" Text="">Lista De Proveedores</asp:Label><br/>
-    <asp:GridView ID="GVProviders" runat="server" OnSelectedIndexChanged="GVProviders_SelectedIndexChanged" DataKeyNames="id_provider" OnRowDeleting="GVProviders_RowDeleting">
+    <asp:GridView ID="GVProviders" runat="server" CssClass="table table-hover" OnSelectedIndexChanged="GVProviders_SelectedIndexChanged" DataKeyNames="id_provider" OnRowDeleting="GVProviders_RowDeleting">
         <Columns>
             <asp:CommandField ShowSelectButton="True" />
             <asp:CommandField ShowDeleteButton="True" />
