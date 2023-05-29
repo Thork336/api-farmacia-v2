@@ -17,12 +17,12 @@
     <asp:Label ID="Label4" runat="server" Text="">Ingrese el telefono del envio:</asp:Label><br/>
     <asp:TextBox ID="TBPhoneSend" runat="server"></asp:TextBox><br/>
 
-    <asp:Button ID="BtnGuardar" runat="server" Text="Guardar" OnClick="save"/>
-    <asp:Button ID="BtnActualizar" runat="server" Text="Actualizar" OnClick="update"/><br/>
+    <asp:Button ID="BtnGuardar" runat="server" CssClass="btn btn-success" Text="Guardar" OnClick="save"/>
+    <asp:Button ID="BtnActualizar" runat="server" CssClass="btn btn-info" Text="Actualizar" OnClick="update"/><br/>
     <asp:Label ID="LblMensaje" runat="server" Text=""></asp:Label><br/>
 
     <asp:Label ID="Label1" runat="server" Text="">Lista de envios:</asp:Label><br/>
-    <asp:GridView ID="GVSend" runat="server" OnSelectedIndexChanged="GVSend_SelectedIndexChanged" DataKeyNames="id_env" OnRowDeleting="GVSend_RowDeleting">
+    <asp:GridView ID="GVSend" runat="server" CssClass="table table-hover" OnSelectedIndexChanged="GVSend_SelectedIndexChanged" DataKeyNames="id_env" OnRowDeleting="GVSend_RowDeleting">
         <Columns>
             <asp:CommandField ShowSelectButton="True" />
             <asp:CommandField ShowDeleteButton="True" />

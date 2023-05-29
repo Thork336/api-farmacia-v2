@@ -31,12 +31,12 @@
     <asp:Label ID="Label9" runat="server" Text="">Ingrese El Tipo De Licencia</asp:Label><br/>
     <asp:TextBox ID="TBTipoLicencia" runat="server"></asp:TextBox><br/>
 
-    <asp:Button ID="BtnGuardar" runat="server" Text="Guardar" OnClick="BtnGuardar_Click" /><br/>
-    <asp:Button ID="BtnActualizar" runat="server" Text="Actualizar" OnClick="BtnActualizar_Click" /><br/>
+    <asp:Button ID="BtnGuardar" runat="server" CssClass="btn btn-success" Text="Guardar" OnClick="BtnGuardar_Click" />
+    <asp:Button ID="BtnActualizar" runat="server" CssClass="btn btn-info" Text="Actualizar" OnClick="BtnActualizar_Click" /><br/>
     <asp:Label ID="LblMensaje" runat="server" Text=""></asp:Label><br/>
 
     <asp:Label ID="Label1" runat="server" Text="">Lista De Conductores</asp:Label><br/>
-    <asp:GridView ID="GVDriver" runat="server" OnSelectedIndexChanged="GVDriver_SelectedIndexChanged" DataKeyNames="id_cond" OnRowDeleting="GVDriver_RowDeleting" style="margin-right: 0px">
+    <asp:GridView ID="GVDriver" runat="server" CssClass="table table-hover" OnSelectedIndexChanged="GVDriver_SelectedIndexChanged" DataKeyNames="id_cond" OnRowDeleting="GVDriver_RowDeleting" style="margin-right: 0px">
         <Columns>
             <asp:CommandField ShowSelectButton="True" />
             <asp:CommandField ShowDeleteButton="True" />
