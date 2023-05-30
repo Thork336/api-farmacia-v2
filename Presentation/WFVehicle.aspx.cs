@@ -26,6 +26,7 @@ namespace Presentation
             if (!Page.IsPostBack)
             {
                 showVehicle();
+                showDriverDDL();
             }
         }
         private void showVehicle()
@@ -37,14 +38,23 @@ namespace Presentation
 
         }
 
+        private void showDriverDDL()
+        {
+            DDLDriver.DataSource = objVehicle.showVehicleDDL();
+            DDLDriver.DataValueField = "id_cond";
+            DDLDriver.DataTextField = "Nombre Conductor";
+            DDLDriver.DataBind();
+            DDLDriver.Items.Insert(0, "Seleccione");
+
+        }
         protected void BtnSave_Click(object sender, EventArgs e)
         {
             _placa = TBPlaca.Text;
             _modelo = Convert.ToInt32(TBModelo.Text);
             _tipo = TBTipo.Text;
             _capacidad = TBCapacidad.Text;
-            _id_driver = Convert.ToInt32(TBId_cond.Text);
-            executed = objVehicle.saveVehicle(_placa,_modelo, _tipo, _capacidad, _id_driver);
+            _id_driver = Convert.ToInt32(DDLDriver.Text);
+            executed = objVehicle.saveVehicle(_placa, _modelo, _tipo, _capacidad, _id_driver);
             if (executed)
             {
                 LblMsj.Text = "Se guardó exitosamente";
@@ -65,7 +75,7 @@ namespace Presentation
             _modelo = Convert.ToInt32(TBModelo.Text);
             _tipo = TBTipo.Text;
             _capacidad = TBCapacidad.Text;
-            _id_driver = Convert.ToInt32(TBId_cond.Text);
+            _id_driver = Convert.ToInt32(DDLDriver.Text);
             executed = objVehicle.updateVehicle(_id, _placa, _modelo, _tipo, _capacidad, _id_driver);
             if (executed)
             {
@@ -86,7 +96,7 @@ namespace Presentation
             TBModelo.Text = GVVehicle.SelectedRow.Cells[4].Text;
             TBTipo.Text = GVVehicle.SelectedRow.Cells[5].Text;
             TBCapacidad.Text = GVVehicle.SelectedRow.Cells[6].Text;
-            TBId_cond.Text = GVVehicle.SelectedRow.Cells[7].Text;
+            DDLDriver.Text = GVVehicle.SelectedRow.Cells[7].Text;
         }
 
         protected void GVVehicle_RowDeleting(object sender, GridViewDeleteEventArgs e)
@@ -112,7 +122,7 @@ namespace Presentation
             TBModelo.Text = "";
             TBTipo.Text = "";
             TBCapacidad.Text = "";
-            TBId_cond.Text = "";
+            DDLDriver.Text = "Seleccione";
 
             LblMsj.Text = "Limpio";
         }
@@ -124,7 +134,7 @@ namespace Presentation
             TBModelo.Text = "";
             TBTipo.Text = "";
             TBCapacidad.Text = "";
-            TBId_cond.Text = "";
+            DDLDriver.Text = "Seleccione";
         }
     }
 }

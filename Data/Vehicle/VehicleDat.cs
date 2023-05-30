@@ -25,6 +25,19 @@ namespace Data.Vehicle
             objPer.CloseConnection();
             return objData;
         }
+        public DataSet showVehicleDDL()
+        {
+            MySqlDataAdapter objAdapter = new MySqlDataAdapter();
+            DataSet objData = new DataSet();
+            MySqlCommand objSelectCmd = new MySqlCommand();
+            objSelectCmd.Connection = objPer.OpenConnection();
+            objSelectCmd.CommandText = "procSelectDriverDDL";
+            objSelectCmd.CommandType = CommandType.StoredProcedure;
+            objAdapter.SelectCommand = objSelectCmd;
+            objAdapter.Fill(objData);
+            objPer.CloseConnection();
+            return objData;
+        }
 
         public bool saveVehicle(string _plate_vehicle, int _model_vehicle, string _type_vehicle, string _capacityLoading_vehicle, int _id_driver)
         {

@@ -57,12 +57,32 @@ namespace Presentation
 
         protected void BtnUpdate_Click(object sender, EventArgs e)
         {
+            ICryptoService cryptoService = new PBKDF2();
+            _id = Convert.ToInt32(LblId.Text);
+            _mail = TBMail.Text;
+            _contrasena = TBContrasena.Text;
+            _state = DDLState.SelectedValue;
+            _salt = cryptoService.GenerateSalt();
+            _encryptedPassword = cryptoService.Compute(_contrasena);
 
+            executed = objUse.updateUser(_id, _mail, _encryptedPassword, _salt, _state);
+
+            if (executed)
+            {
+                LblMsj.Text = "Se actualizo exitosamente";
+                showUsers();
+            }
+            else
+            {
+                LblMsj.Text = "Error al actualizar";
+            }
         }
 
         protected void GVUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
-
+            LblId.Text = GVUsers.SelectedRow.Cells[0].Text;
+            TBMail.Text = GVUsers.SelectedRow.Cells[1].Text;
+            DDLState.SelectedValue = GVUsers.SelectedRow.Cells[4].Text;
         }
     }
 }

@@ -23,5 +23,20 @@ namespace Presentation
         {
             Response.Redirect("WFSend.aspx");
         }
+
+        protected void LBUser_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WFUser.aspx");
+        }
+
+        protected void LBVehicle_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WFVehicle.aspx");
+        }
+
+        protected void LBIndex_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("WFIndex.aspx");
+        }
     }
 }

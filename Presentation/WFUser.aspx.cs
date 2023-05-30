@@ -108,7 +108,7 @@ namespace Presentation
             TBPassword.Text = "";
             TBSalt.Text = "";
             TBState.Text = "";
-            LblMsj.Text = "Limpio";
+            LblMsj2.Text = "Limpio";
         }
 
         private void Clear()
@@ -118,7 +118,6 @@ namespace Presentation
             TBPassword.Text = "";
             TBSalt.Text = "";
             TBState.Text = "";
-            LblMsj.Text = "Limpio";
         }
     }
 }

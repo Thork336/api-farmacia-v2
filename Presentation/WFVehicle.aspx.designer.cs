@@ -15,15 +15,6 @@ namespace Presentation
     {
 
         /// <summary>
-        /// Control form1.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.HtmlControls.HtmlForm form1;
-
-        /// <summary>
         /// Control Label1.
         /// </summary>
         /// <remarks>
@@ -123,22 +114,13 @@ namespace Presentation
         protected global::System.Web.UI.WebControls.Label Label6;
 
         /// <summary>
-        /// Control DropDownList1.
+        /// Control DDLDriver.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList DropDownList1;
-
-        /// <summary>
-        /// Control TBId_cond.
-        /// </summary>
-        /// <remarks>
-        /// Campo generado automáticamente.
-        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox TBId_cond;
+        protected global::System.Web.UI.WebControls.DropDownList DDLDriver;
 
         /// <summary>
         /// Control LblMsj.

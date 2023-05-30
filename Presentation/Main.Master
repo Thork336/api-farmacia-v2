@@ -4,21 +4,40 @@
 
 <html>
 <head runat="server">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 </head>
 <body>
+    <!--<nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" aria-current="page" href="Index.aspx">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="WFUser.aspx">Usuarios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="WFVehicle.aspx">Vehiculos</a></li>
+                    <li class="nav-item"><a class="nav-link" href="WFDriver.aspx">Conductor</a></li>
+                    <li class="nav-item"><a class="nav-link" href="WFUsers.aspx">Usuarios</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>-->
     <form id="form1" runat="server">
         <div>
-            <asp:Label ID="Label1" runat="server" Text="">Menu</asp:Label><br/>
+            <asp:Label ID="Label1" runat="server" Text="">Menu</asp:Label><br />
+            <asp:LinkButton ID="LBIndex" runat="server" OnClick="LBIndex_Click">Inicio</asp:LinkButton><br />
             <asp:LinkButton ID="LBProviders" runat="server" OnClick="LBProviders_Click">Proveedores</asp:LinkButton>
             <asp:LinkButton ID="LBDriver" runat="server" OnClick="LBDriver_Click">Conductores</asp:LinkButton>
-            <asp:LinkButton ID="LBSend" runat="server" OnClick="LBSend_Click">Enviar</asp:LinkButton><br/>
+            <asp:LinkButton ID="LBSend" runat="server" OnClick="LBSend_Click">Enviar</asp:LinkButton>
+            <asp:LinkButton ID="LBUser" runat="server" OnClick="LBUser_Click">Usuarios</asp:LinkButton>
+            <asp:LinkButton ID="LBVehicle" runat="server" OnClick="LBVehicle_Click">Vehiculos</asp:LinkButton>
             <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
             </asp:ContentPlaceHolder>
-            <asp:Label ID="Label2" runat="server" Text="">Pie De Pagina</asp:Label><br/>
         </div>
     </form>
 </body>

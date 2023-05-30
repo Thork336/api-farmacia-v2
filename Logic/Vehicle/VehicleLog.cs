@@ -16,6 +16,10 @@ namespace Logic.Vehicle
         {
             return objVehicle.showVehicle();
         }
+        public DataSet showVehicleDDL()
+        {
+            return objVehicle.showVehicleDDL();
+        }
         public bool saveVehicle(string _plate_vehicle, int _model_vehicle, string _type_vehicle, string _capacityLoading_vehicle, int _id_driver)
         {
             return objVehicle.saveVehicle(_plate_vehicle, _model_vehicle, _type_vehicle, _capacityLoading_vehicle, _id_driver);

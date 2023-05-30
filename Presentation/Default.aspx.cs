@@ -9,6 +9,8 @@ using System.Web.UI.WebControls;
 using Logic;
 using SimpleCrypto;
 using System.Web.Security;
+using System.EnterpriseServices;
+using System.Data;
 
 namespace Presentation
 {
@@ -23,31 +25,38 @@ namespace Presentation
 
         }
 
+
+
         protected void BtGuardar_Click(object sender, EventArgs e)
         {
-            ICryptoService cryptoService = new PBKDF2();
+            Response.Redirect("Index.aspx");
+            /*ICryptoService cryptoService = new PBKDF2();
             correo = TBCorreo.Text;
             contrasena = TBContrasena.Text;
             objUser = objUserLog.ShowUsersMail(correo);//Busca el correo del usuario
             if (objUser != null)
             {
-                string passEncryp = cryptoService.Compute(contrasena, objUser.Salt);
-                if (cryptoService.Compare(objUser.Contrasena, passEncryp))
-                {
-                    FormsAuthentication.RedirectFromLoginPage("Index.aspx", true);
-                    TBCorreo.Text = "";
-                    TBContrasena.Text = "";
+                objUserLog.showUser();
+                //string passEncryp = cryptoService.Compute(contrasena, objUser.Salt);
+                //if (cryptoService.Compare(objUser.Contrasena, passEncryp))
+                //{
+                    // Autenticación exitosa
+                    //FormsAuthentication.SetAuthCookie(correo, false); // Establece la cookie de autenticación
+                    //FormsAuthentication.RedirectFromLoginPage("Index.aspx", true);
+                    
+                  //  TBCorreo.Text = "";
+                  //  TBContrasena.Text = "";
 
-                }
-                else
-                {
-                    LblMsg.Text = "Correo o Contraseña Incorrectos!";
-                }
+                //}
+                //else
+                //{
+                  //  LblMsg.Text = "Correo o Contraseña Incorrectos!";
+                //}
             }
             else
             {
                 LblMsg.Text = "Correo o Contraseña Incorrectos!";
-            }
+            }*/
         }
     }
 }

@@ -178,6 +178,8 @@ C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\api-farmacia-v2\P
 C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\api-farmacia-v2\Presentation\obj\Debug\Presentation.csproj.CopyComplete
 C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\api-farmacia-v2\Presentation\obj\Debug\Presentation.dll
 C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\api-farmacia-v2\Presentation\obj\Debug\Presentation.pdb
+C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\CARPETA FARMACIA\api-farmacia-v2\Presentation\obj\Debug\Presentation.csproj.AssemblyReference.cache
+C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\CARPETA FARMACIA\api-farmacia-v2\Presentation\obj\Debug\Presentation.csproj.CoreCompileInputs.cache
 C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\CARPETA FARMACIA\api-farmacia-v2\Presentation\bin\Presentation.dll.config
 C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\CARPETA FARMACIA\api-farmacia-v2\Presentation\bin\Presentation.dll
 C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\CARPETA FARMACIA\api-farmacia-v2\Presentation\bin\Presentation.pdb
@@ -267,8 +269,6 @@ C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\CARPETA FARMACIA\
 C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\CARPETA FARMACIA\api-farmacia-v2\Presentation\bin\K4os.Hash.xxHash.xml
 C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\CARPETA FARMACIA\api-farmacia-v2\Presentation\bin\System.Numerics.Vectors.xml
 C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\CARPETA FARMACIA\api-farmacia-v2\Presentation\bin\System.Buffers.xml
-C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\CARPETA FARMACIA\api-farmacia-v2\Presentation\obj\Debug\Presentation.csproj.AssemblyReference.cache
-C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\CARPETA FARMACIA\api-farmacia-v2\Presentation\obj\Debug\Presentation.csproj.CoreCompileInputs.cache
 C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\CARPETA FARMACIA\api-farmacia-v2\Presentation\obj\Debug\Presentation.csproj.CopyComplete
 C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\CARPETA FARMACIA\api-farmacia-v2\Presentation\obj\Debug\Presentation.dll
 C:\Users\Asus\Documents\FUP2023\CREDITOS LIBRES 1\Repositorios\CARPETA FARMACIA\api-farmacia-v2\Presentation\obj\Debug\Presentation.pdb
