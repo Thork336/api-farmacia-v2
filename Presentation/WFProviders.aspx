@@ -23,7 +23,7 @@
     <asp:Label ID="LblMensaje" runat="server" Text=""></asp:Label><br/>
 
     <asp:Label ID="Label1" runat="server" Text="">Lista De Proveedores</asp:Label><br/>
-    <asp:GridView ID="GVProviders" runat="server" CssClass="table table-hover" OnSelectedIndexChanged="GVProviders_SelectedIndexChanged" DataKeyNames="id_provider" OnRowDeleting="GVProviders_RowDeleting">
+    <asp:GridView ID="GVProviders" runat="server" CssClass="table table-hover table-primary" OnSelectedIndexChanged="GVProviders_SelectedIndexChanged" DataKeyNames="id_provider" OnRowDeleting="GVProviders_RowDeleting">
         <Columns>
             <asp:CommandField ShowSelectButton="True" />
             <asp:CommandField ShowDeleteButton="True" />
