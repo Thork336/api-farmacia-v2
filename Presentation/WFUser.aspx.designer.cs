@@ -60,22 +60,31 @@ namespace Presentation
         protected global::System.Web.UI.WebControls.TextBox TBPassword;
 
         /// <summary>
-        /// Control TBTypeUser.
+        /// Control TBSalt111.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label TBTypeUser;
+        protected global::System.Web.UI.WebControls.Label TBSalt111;
 
         /// <summary>
-        /// Control TBType.
+        /// Control TBSalt.
         /// </summary>
         /// <remarks>
         /// Campo generado automáticamente.
         /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList TBType;
+        protected global::System.Web.UI.WebControls.TextBox TBSalt;
+
+        /// <summary>
+        /// Control TBState.
+        /// </summary>
+        /// <remarks>
+        /// Campo generado automáticamente.
+        /// Para modificarlo, mueva la declaración del campo del archivo del diseñador al archivo de código subyacente.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList TBState;
 
         /// <summary>
         /// Control LblMsj.

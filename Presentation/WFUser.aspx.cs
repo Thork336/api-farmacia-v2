@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.Data;
 using System.Linq;
+using System.Net.NetworkInformation;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -13,9 +14,10 @@ namespace Presentation
     {
         UserLog objUser = new UserLog();
         private string _mail_user;
-        private int _password;
+        private string _password;
         private bool executed = false;
-        private string _type_user;
+        private string _salt_user;
+        private string _state_user;
         private int _id;
         protected void Page_Load(object sender, EventArgs e)
         {
@@ -56,15 +58,17 @@ namespace Presentation
             TBId.Text = GVUser.SelectedRow.Cells[2].Text;
             TBEmail.Text = GVUser.SelectedRow.Cells[3].Text;
             TBPassword.Text = GVUser.SelectedRow.Cells[4].Text;
-            TBType.Text = GVUser.SelectedRow.Cells[5].Text;
+            TBSalt.Text = GVUser.SelectedRow.Cells[5].Text;
+            TBState.Text = GVUser.SelectedRow.Cells[6].Text;
         }
 
         protected void BtnSave_Click(object sender, EventArgs e)
         {
             _mail_user = TBEmail.Text;
-            _password = Convert.ToInt32(TBPassword.Text);
-            _type_user = TBType.Text;
-            executed = objUser.saveUser(_mail_user, _password, _type_user);
+            _password = TBPassword.Text;
+            _salt_user = TBSalt.Text;
+            _state_user = TBState.Text;
+            executed = objUser.saveUser(_mail_user, _password, _salt_user, _state_user);
             if (executed)
             {
                 LblMsj.Text = "Se guardó exitosamente";
@@ -81,9 +85,10 @@ namespace Presentation
         {
             _id = Convert.ToInt32(TBId.Text);
             _mail_user = TBEmail.Text;
-            _password = Convert.ToInt32(TBPassword.Text);
-            _type_user = TBType.Text;
-            executed = objUser.updateUser(_id, _mail_user, _password, _type_user);
+            _password = TBPassword.Text;
+            _salt_user = TBSalt.Text;
+            _state_user = TBState.Text;
+            executed = objUser.updateUser(_id, _mail_user, _password, _salt_user, _state_user);
             if (executed)
             {
                 LblMsj.Text = "Se actualizó exitosamente";
@@ -101,7 +106,8 @@ namespace Presentation
             TBId.Text = "";
             TBEmail.Text = "";
             TBPassword.Text = "";
-            TBTypeUser.Text = "";
+            TBSalt.Text = "";
+            TBState.Text = "";
             LblMsj.Text = "Limpio";
         }
 
@@ -110,7 +116,9 @@ namespace Presentation
             TBId.Text = "";
             TBEmail.Text = "";
             TBPassword.Text = "";
-            TBTypeUser.Text = "";
+            TBSalt.Text = "";
+            TBState.Text = "";
+            LblMsj.Text = "Limpio";
         }
     }
 }

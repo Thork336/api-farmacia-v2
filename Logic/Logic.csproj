@@ -130,6 +130,10 @@
       <Project>{DA401D20-862E-4BE0-886D-3D31D40C0198}</Project>
       <Name>Data</Name>
     </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{7DE6B74E-7E65-49AF-BA9D-83CBDDC3D89E}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup />
   <PropertyGroup>

@@ -27,11 +27,12 @@
             <br />
             <asp:TextBox ID="TBPassword" placeholder="Contraseña" runat="server"></asp:TextBox>
             <br />
-            <asp:Label ID="TBTypeUser" runat="server" Text="Elige el tipo usuario"></asp:Label>
+            <!--<asp:Label ID="TBSalt111" runat="server" Text="Elige el tipo usuario"></asp:Label>-->
+            <asp:TextBox ID="TBSalt" placeholder="Salt" runat="server"></asp:TextBox>
             <br />
-            <asp:DropDownList ID="TBType" runat="server">
-                <asp:ListItem>Empleado</asp:ListItem>
-                <asp:ListItem>Propietario</asp:ListItem>
+            <asp:DropDownList ID="TBState" runat="server">
+                <asp:ListItem>Activo</asp:ListItem>
+                <asp:ListItem>Inactivo</asp:ListItem>
             </asp:DropDownList>
             <br />
             <br />
