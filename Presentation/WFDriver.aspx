@@ -36,7 +36,7 @@
     <asp:Label ID="LblMensaje" runat="server" Text=""></asp:Label><br/>
 
     <asp:Label ID="Label1" runat="server" Text="">Lista De Conductores</asp:Label><br/>
-    <asp:GridView ID="GVDriver" runat="server" CssClass="table table-hover" OnSelectedIndexChanged="GVDriver_SelectedIndexChanged" DataKeyNames="id_cond" OnRowDeleting="GVDriver_RowDeleting" style="margin-right: 0px">
+    <asp:GridView ID="GVDriver" runat="server" CssClass="table table-hover table-primary" OnSelectedIndexChanged="GVDriver_SelectedIndexChanged" DataKeyNames="id_cond" OnRowDeleting="GVDriver_RowDeleting" style="margin-right: 0px">
         <Columns>
             <asp:CommandField ShowSelectButton="True" />
             <asp:CommandField ShowDeleteButton="True" />
