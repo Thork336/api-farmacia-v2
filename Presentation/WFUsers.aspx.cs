@@ -39,7 +39,7 @@ namespace Presentation
         {
             ICryptoService cryptoService = new PBKDF2();
             _mail = TBMail.Text;
-            _contrasena = TBContrasena.Text;
+            _contrasena = TBPassword.Text;
             _state = DDLState.SelectedValue;
             _salt = cryptoService.GenerateSalt();
             _encryptedPassword = cryptoService.Compute(_contrasena);
@@ -60,7 +60,7 @@ namespace Presentation
             ICryptoService cryptoService = new PBKDF2();
             _id = Convert.ToInt32(LblId.Text);
             _mail = TBMail.Text;
-            _contrasena = TBContrasena.Text;
+            _contrasena = TBPassword.Text;
             _state = DDLState.SelectedValue;
             _salt = cryptoService.GenerateSalt();
             _encryptedPassword = cryptoService.Compute(_contrasena);
@@ -80,9 +80,10 @@ namespace Presentation
 
         protected void GVUsers_SelectedIndexChanged(object sender, EventArgs e)
         {
-            LblId.Text = GVUsers.SelectedRow.Cells[0].Text;
-            TBMail.Text = GVUsers.SelectedRow.Cells[1].Text;
-            DDLState.SelectedValue = GVUsers.SelectedRow.Cells[4].Text;
+            LblId.Text = GVUsers.SelectedRow.Cells[1].Text;
+            TBMail.Text = GVUsers.SelectedRow.Cells[2].Text;
+            TBPassword.Text = GVUsers.SelectedRow.Cells[3].Text;
+            DDLState.SelectedValue = GVUsers.SelectedRow.Cells[5].Text;
         }
     }
 }

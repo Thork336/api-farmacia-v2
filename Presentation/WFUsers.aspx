@@ -22,7 +22,7 @@
                             <li class="nav-item"><a class="nav-link" href="WFUser.aspx">Usuarios</a></li>
                             <li class="nav-item"><a class="nav-link" href="WFVehicle.aspx">Vehiculos</a></li>
                             <li class="nav-item"><a class="nav-link" href="WFDriver.aspx">Conductor</a></li>
-                            <li class="nav-item"><a class="nav-link" href="WFUsers.aspx">Usuarios</a></li>
+                            <li class="nav-item"><a class="nav-link" href="WFUsers.aspx">Usuarios2</a></li>
                         </ul>
                     </div>
                 </div>
@@ -37,7 +37,7 @@
                         <asp:TextBox ID="TBMail" runat="server" TextMode="Email"></asp:TextBox><br />
                         <%--Contraseña--%>
                         <asp:Label ID="Label2" runat="server" Text="Ingrese la contraseña"></asp:Label>
-                        <asp:TextBox ID="TBContrasena" runat="server"
+                        <asp:TextBox ID="TBPassword" runat="server"
                             TextMode="Password"></asp:TextBox><br />
                         <%--Estados--%>
                         <asp:Label ID="Label3" runat="server" Text="Estado"></asp:Label>
@@ -53,14 +53,9 @@
                         <%--Mensaje--%>
                         <asp:Label ID="LblMsj" runat="server" Text=""></asp:Label><br />
                         <%--Tabla--%>
-                        <asp:GridView ID="GVUsers" runat="server" AutoGenerateColumns="False"
+                        <asp:GridView ID="GVUsers" runat="server" DataKeyNames="id_us"
                             OnSelectedIndexChanged="GVUsers_SelectedIndexChanged">
                             <Columns>
-                                <asp:BoundField DataField="id_us" HeaderText="Id" />
-                                <asp:BoundField DataField="correo_us" HeaderText="Correo" />
-                                <asp:BoundField DataField="contrasena_us" HeaderText="Contraseña" />
-                                <asp:BoundField DataField="salt_us" HeaderText="Salt" />
-                                <asp:BoundField DataField="estado_us" HeaderText="Estado" />
                                 <asp:CommandField ShowSelectButton="True" />
                             </Columns>
                         </asp:GridView>

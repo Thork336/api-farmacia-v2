@@ -30,33 +30,33 @@ namespace Presentation
         protected void BtGuardar_Click(object sender, EventArgs e)
         {
             Response.Redirect("Index.aspx");
-            /*ICryptoService cryptoService = new PBKDF2();
+            ICryptoService cryptoService = new PBKDF2();
             correo = TBCorreo.Text;
             contrasena = TBContrasena.Text;
             objUser = objUserLog.ShowUsersMail(correo);//Busca el correo del usuario
             if (objUser != null)
             {
                 objUserLog.showUser();
-                //string passEncryp = cryptoService.Compute(contrasena, objUser.Salt);
-                //if (cryptoService.Compare(objUser.Contrasena, passEncryp))
-                //{
+                string passEncryp = cryptoService.Compute(contrasena, objUser.Salt);
+                if (cryptoService.Compare(objUser.Contrasena, passEncryp))
+                {
                     // Autenticación exitosa
                     //FormsAuthentication.SetAuthCookie(correo, false); // Establece la cookie de autenticación
-                    //FormsAuthentication.RedirectFromLoginPage("Index.aspx", true);
+                    FormsAuthentication.RedirectFromLoginPage("Index.aspx", true);
                     
-                  //  TBCorreo.Text = "";
-                  //  TBContrasena.Text = "";
+                    TBCorreo.Text = "";
+                    TBContrasena.Text = "";
 
-                //}
-                //else
-                //{
-                  //  LblMsg.Text = "Correo o Contraseña Incorrectos!";
-                //}
+                }
+                else
+                {
+                    LblMsg.Text = "Correo o Contraseña Incorrectos!";
+                }
             }
             else
             {
                 LblMsg.Text = "Correo o Contraseña Incorrectos!";
-            }*/
+            }
         }
     }
 }

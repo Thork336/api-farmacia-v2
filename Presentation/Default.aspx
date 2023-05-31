@@ -6,7 +6,7 @@
 <head runat="server">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title></title>
-    
+    <link href="resource/css/bootstrap.min.css" rel="stylesheet" />
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous"/>
     
     <!--Fontawesome CDN-->
@@ -21,11 +21,6 @@
 		<div class="card">
 			<div class="card-header">
 				<h3>Sign In</h3>
-				<div class="d-flex justify-content-end social_icon">
-					<span><i class="fab fa-facebook-square"></i></span>
-					<span><i class="fab fa-google-plus-square"></i></span>
-					<span><i class="fab fa-twitter-square"></i></span>
-				</div>
 			</div>
 			<div class="card-body">
 				<form>
@@ -68,7 +63,7 @@
             <asp:TextBox ID="TBCorreo" runat="server"></asp:TextBox><br />
             <asp:Label ID="Label3" runat="server" Text="">Contraseña</asp:Label>
             <asp:TextBox ID="TBContrasena" runat="server" TextMode="Password"></asp:TextBox><br />
-            <asp:Button ID="BtGuardar" runat="server" Text="Iniciar Sesión" OnClick="BtGuardar_Click" /><br />
+            <asp:Button ID="BTNGuardar" runat="server" Text="Iniciar Sesión" OnClick="BtGuardar_Click" /><br />
             <asp:Label ID="LblMsg" runat="server" Text=""></asp:Label>
         </div>
     </form>-->
